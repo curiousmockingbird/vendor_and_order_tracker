@@ -54,5 +54,19 @@ namespace Business.Tests
       // Assert
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetVendors_ReturnsVendorsList_VendorList()
+    {
+      // Arrange
+      Vendor vendor1 = new Vendor("Matthews", "Small business from around the corner");
+      Vendor vendor2 = new Vendor("Olga's Cafe", "Small business in Downtown");
+      Vendor vendor3 = new Vendor("Cat cafe", "Cat Cafe and non-profit animal shelter");
+      List<Vendor> newList = new List<Vendor> { vendor1, vendor2, vendor3 };
+      // Act
+      List<Vendor> result = Vendor.GetVendors();
+      // Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
