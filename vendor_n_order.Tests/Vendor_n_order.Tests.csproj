@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Practice\Practice.csproj" />  
+    <ProjectReference Include="..\vendor_n_order\Vendor_n_order.csproj" />  
   </ItemGroup>
 
 </Project>
