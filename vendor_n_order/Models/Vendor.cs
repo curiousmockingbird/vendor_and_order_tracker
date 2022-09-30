@@ -33,6 +33,10 @@ namespace Business.Models
     {
       Orders.Add(order);
     }
+    public static Vendor FindId(int id)
+    {
+      return _vendor[id -1];
+    }
 
   }
 }
