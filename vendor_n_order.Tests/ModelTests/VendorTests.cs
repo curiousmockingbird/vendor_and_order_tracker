@@ -11,7 +11,7 @@ namespace Business.Tests
     public void CreateVendorConstructor_CreatesVendorConstructor_Vendor()
     {
       //Arrange
-      Vendor vendor1 = new Vendor();
+      Vendor vendor1 = new Vendor("Mathews");
       //Act
       //Assert
       Assert.AreEqual(typeof(Vendor), vendor1.GetType());
@@ -21,7 +21,7 @@ namespace Business.Tests
     public void SetVendorName_SetsNameForVendor_String()
     {
       //Arrange
-      Vendor vendor1 = new Vendor("Mathews");
+      Vendor vendor1 = new Vendor("Matthews");
       //Act
       string result = vendor1.Name;
       //Assert
