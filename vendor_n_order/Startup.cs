@@ -6,13 +6,13 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Business
 {
-  public class Startup
-  {
-    public Startup(IWebHostEnvironment env)
+	public class Startup
+	{
+		public Startup(IWebHostEnvironment env)
     {
       var builder = new ConfigurationBuilder()
-          .SetBasePath(env.ContentRootPath)
-          .AddEnvironmentVariables();
+        .SetBasePath(env.ContentRootPath)
+        .AddEnvironmentVariables();
       Configuration = builder.Build();
     }
 
@@ -25,18 +25,12 @@ namespace Business
 
     public void Configure(IApplicationBuilder app)
     {
-      app.UseDeveloperExceptionPage();
-      app.UseRouting();
+			app.UseRouting();	
 
       app.UseEndpoints(routes =>
       {
         routes.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
       });
-
-      app.Run(async (context) =>
-      {
-        await context.Response.WriteAsync("Hello World!");
-      });
     }
-  }
+	}
 }

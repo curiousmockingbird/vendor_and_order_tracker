@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Business.Models;
 using System;
 
-namespace Order.Tests
+namespace Business.Tests
 {
   [TestClass]
   public class OrderTests
