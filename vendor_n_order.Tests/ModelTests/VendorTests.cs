@@ -94,5 +94,16 @@ namespace Business.Tests
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
+    public void FindId_FindsVendorId_Int()
+    {
+      //Arrange
+      Vendor vendor1 = new Vendor("Matthews", "Small business from around the corner");
+      //Act
+      Vendor result = Vendor.FindId(1);
+      //Assert
+      Assert.AreEqual(vendor1, result);
+    }
+
   }
 }

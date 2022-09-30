@@ -110,10 +110,9 @@ namespace Business.Tests
       Order order1 = new Order("Matt's order", "Cookies and pastries", 30, "Sep 20, 2022");
       Order order2 = new Order("Olga's order", "Bread and desserts", 15, "Aug 2, 2022");
       // Act
-      Order orders = Order.FindId(2);
-      int result = orders.Id;
+      Order result = Order.FindId(2);
       // Assert
-      Assert.AreEqual(2, result);
+      Assert.AreEqual(order2, result);
     }
   }
 }
