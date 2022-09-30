@@ -8,12 +8,13 @@ namespace Order.Tests
   public class OrderTests
   {
     [TestMethod]
-    public void ABC_ABC_Result()
+    public void CreateOrderConstructor_CreatesOrderConstructor_Order()
     {
       //Arrange
+      Order order1 = new Order("Matt's order", "Cookies and pastries", 30, "Sep 20, 2022");
       //Act
       //Assert
-      // Assert.AreEqual();
+      Assert.AreEqual(typeof(Order), order1.GetType());
     }
   }
 }
