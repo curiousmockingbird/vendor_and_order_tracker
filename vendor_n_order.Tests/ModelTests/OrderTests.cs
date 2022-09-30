@@ -72,5 +72,18 @@ namespace Business.Tests
       // Assert
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetOrders_ReturnsOrdersList_OrderList()
+    {
+      // Arrange
+      Order order1 = new Order("Matt's order", "Cookies and pastries", 30, "Sep 20, 2022");
+      Order order2 = new Order("Olga's order", "Bread and desserts", 15, "Aug 2, 2022");
+      List<Order> newList = new List<Order> { order1, order2 };
+      // Act
+      List<Order> result = Order.GetOrders();
+      // Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
