@@ -102,5 +102,18 @@ namespace Business.Tests
       // Assert
       Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void FindId_FindsOrderId_Int()
+    {
+      // Arrange
+      Order order1 = new Order("Matt's order", "Cookies and pastries", 30, "Sep 20, 2022");
+      Order order2 = new Order("Olga's order", "Bread and desserts", 15, "Aug 2, 2022");
+      // Act
+      Order orders = Order.FindOrder(2);
+      int result = orders.Id;
+      // Assert
+      Assert.AreEqual(2, result);
+    }
   }
 }
