@@ -6,6 +6,7 @@ namespace Business.Models
     public string Title { get; set; }
     public string Description { get; set; }
     public int Price { get; set; }
+    public string Date { get; set; }
     
     //Constructor
     public Order(string title, string description, int price, string date)
@@ -13,6 +14,7 @@ namespace Business.Models
       Title = title;
       Description = description;
       Price = price;
+      Date = date;
     }
     //Methods
   }
