@@ -45,9 +45,9 @@ namespace Business.Tests
       //Arrange
       Order order1 = new Order("Matt's order", "Cookies and pastries", 30, "Sep 20, 2022");
       //Act
-      string result = order1.Price;
+      int result = order1.Price;
       //Assert
-      Assert.AreEqual("Cookies and pastries", result);
+      Assert.AreEqual(30, result);
     }
   }
 }
