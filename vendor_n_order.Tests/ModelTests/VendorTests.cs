@@ -82,5 +82,17 @@ namespace Business.Tests
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void SetId_ReturnsVendorId_Int()
+    {
+      //Arrange
+      Vendor vendor1 = new Vendor("Matthews", "Small business from around the corner");
+      //Act
+      int result = vendor1.Id;
+      //Assert
+      Assert.AreEqual(1, result);
+    }
+
   }
 }
