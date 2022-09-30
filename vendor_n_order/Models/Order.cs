@@ -8,6 +8,7 @@ namespace Business.Models
     public string Description { get; set; }
     public int Price { get; set; }
     public string Date { get; set; }
+    public int Id { get; }
 
     private static List<Order> _order = new List<Order> {};
     
@@ -19,6 +20,7 @@ namespace Business.Models
       Price = price;
       Date = date;
       _order.Add(this);
+      Id = _order.Count;
     }
     //Methods
     public static List<Order> GetOrders()
