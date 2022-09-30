@@ -40,7 +40,7 @@ namespace Business.Tests
     }
 
     [TestMethod]
-    public void Int()
+    public void SetOrderPrice_SetsOrderPrice_Int()
     {
       //Arrange
       Order order1 = new Order("Matt's order", "Cookies and pastries", 30, "Sep 20, 2022");
@@ -48,6 +48,17 @@ namespace Business.Tests
       int result = order1.Price;
       //Assert
       Assert.AreEqual(30, result);
+    }
+
+    [TestMethod]
+    public void SetOrderDate_SetsOrderDate_String()
+    {
+      //Arrange
+      Order order1 = new Order("Matt's order", "Cookies and pastries", 30, "Sep 20, 2022");
+      //Act
+      string result = order1.Date;
+      //Assert
+      Assert.AreEqual("Sep 20, 2022", result);
     }
   }
 }
