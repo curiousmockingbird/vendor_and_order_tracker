@@ -78,7 +78,7 @@ namespace Business.Tests
       Vendor vendor1 = new Vendor("Matthews", "Small business from around the corner");
       vendor1.AddOrder(order1);
       //Act
-      List<Vendor> result = vendor1.Orders;
+      List<Order> result = vendor1.Orders;
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }

@@ -7,6 +7,7 @@ namespace Business.Models
     public string Name { get; set; }
     public string Description { get; set; }
     private static List<Vendor> _vendor = new List<Vendor> {};
+    public List<Order> Orders { get; set; }
 
     // Constructor
     public Vendor(string name, string description)
@@ -14,6 +15,7 @@ namespace Business.Models
       Name = name;
       Description = description;
       _vendor.Add(this);
+      Orders = new List<Order> {};
     }
 
     // Methods
@@ -24,6 +26,10 @@ namespace Business.Models
     public static void ClearAll()
     {
       _vendor.Clear();
+    }
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
     }
 
   }
