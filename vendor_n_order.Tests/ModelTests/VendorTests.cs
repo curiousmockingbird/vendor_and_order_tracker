@@ -68,5 +68,19 @@ namespace Business.Tests
       // Assert
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      //Arrange
+      Order order1 = new Order("Matt's order", "Cookies and pastries", 30, "Sep 20, 2022");
+      List<Order> newList = new List<Order> { order1 };
+      Vendor vendor1 = new Vendor("Matthews", "Small business from around the corner");
+      vendor1.AddOrder(order1);
+      //Act
+      List<Vendor> result = vendor1.Orders;
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
