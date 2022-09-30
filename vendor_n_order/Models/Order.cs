@@ -5,9 +5,9 @@ namespace Business.Models
     //Properties
     
     //Constructor
-    public Order()
+    public Order(string title, string description, int price, string date)
     {
-      
+
     }
     //Methods
   }
