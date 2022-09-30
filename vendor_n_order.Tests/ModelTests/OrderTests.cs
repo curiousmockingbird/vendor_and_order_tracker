@@ -13,7 +13,7 @@ namespace Business.Tests
     {
       Order.ClearAll();
     }
-    
+
     [TestMethod]
     public void CreateOrderConstructor_CreatesOrderConstructor_Order()
     {
@@ -90,6 +90,17 @@ namespace Business.Tests
       List<Order> result = Order.GetOrders();
       // Assert
       CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void SetId_SetsOrderId_Int()
+    {
+      // Arrange
+      Order order1 = new Order("Matt's order", "Cookies and pastries", 30, "Sep 20, 2022");
+      // Act
+      int result = order1.Id;
+      // Assert
+      Assert.AreEqual(1, result);
     }
   }
 }
