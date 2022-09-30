@@ -8,6 +8,7 @@ namespace Business.Models
     public string Description { get; set; }
     private static List<Vendor> _vendor = new List<Vendor> {};
     public List<Order> Orders { get; set; }
+    public int Id { get; }
 
     // Constructor
     public Vendor(string name, string description)
@@ -16,6 +17,7 @@ namespace Business.Models
       Description = description;
       _vendor.Add(this);
       Orders = new List<Order> {};
+      Id = _vendor.Count;
     }
 
     // Methods
