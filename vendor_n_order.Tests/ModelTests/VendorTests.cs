@@ -16,5 +16,16 @@ namespace Business.Tests
       //Assert
       Assert.AreEqual(typeof(Vendor), vendor1.GetType());
     }
+
+    [TestMethod]
+    public void SetVendorName_SetsNameForVendor_String()
+    {
+      //Arrange
+      Vendor vendor1 = new Vendor("Mathews");
+      //Act
+      string result = vendor1.Name;
+      //Assert
+      Assert.AreEqual("Matthews", result);
+    }
   }
 }
