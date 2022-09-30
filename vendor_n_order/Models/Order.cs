@@ -33,5 +33,10 @@ namespace Business.Models
       _order.Clear();
     }
 
+    public static Order FindId(int id)
+    {
+      return _order[id -1];
+    }
+
   }
 }
