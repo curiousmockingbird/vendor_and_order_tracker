@@ -18,11 +18,17 @@ namespace Business.Models
       Description = description;
       Price = price;
       Date = date;
+      _order.Add(this);
     }
     //Methods
     public static List<Order> GetOrders()
     {
       return _order;
+    }
+
+    public static void ClearAll()
+    {
+      _order.Clear();
     }
 
   }
