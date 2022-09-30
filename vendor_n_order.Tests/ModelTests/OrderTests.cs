@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Business.Models;
+using System.Collections.Generic;
 using System;
 
 namespace Business.Tests
@@ -59,6 +60,17 @@ namespace Business.Tests
       string result = order1.Date;
       //Assert
       Assert.AreEqual("Sep 20, 2022", result);
+    }
+
+    [TestMethod]
+    public void GetOrders_ReturnsEmptyList_OrderList()
+    {
+      // Arrange
+      List<Order> newList = new List<Order> { };
+      // Act
+      List<Order> result = Order.GetOrders();
+      // Assert
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
