@@ -27,5 +27,16 @@ namespace Business.Tests
       //Assert
       Assert.AreEqual("Matt's order", result);
     }
+
+    [TestMethod]
+    public void SetOrderDescription_SetsOrderDescription_String()
+    {
+      //Arrange
+      Order order1 = new Order("Matt's order", "Cookies and pastries", 30, "Sep 20, 2022");
+      //Act
+      string result = order1.Description;
+      //Assert
+      Assert.AreEqual("Cookies and pastries", result);
+    }
   }
 }
