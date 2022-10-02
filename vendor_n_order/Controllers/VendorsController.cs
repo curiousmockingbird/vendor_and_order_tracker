@@ -29,11 +29,11 @@ namespace Business.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpGet("/vendors/{id}")]
-    public ActionResult Show(int id)
+    [HttpGet("/vendors/{vendorId}")]
+    public ActionResult Show(int vendorId)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
-      Vendor selectedVendor = Vendor.FindId(id);
+      Vendor selectedVendor = Vendor.FindId(vendorId);
       List<Order> vendorOrders = selectedVendor.Orders;
 
       model.Add("vendor", selectedVendor);

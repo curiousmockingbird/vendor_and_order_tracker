@@ -8,17 +8,17 @@
   <body>
     @using Business.Models;
 
-    <h3>Here are all the orders of this vendor:</h3>
+    <h3>Here are all the orders from @Model["vendor"].Name:</h3>
 
     @if (@Model["orders"].Count == 0)
     {
-      <h3>No orders have been added yet!</h3>
+      <h5>No orders have been added yet!</h5>
     } 
     
     <ol>
     @foreach (Order order in @Model["orders"])
     {
-      <li><a href='/vendor/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+      <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
     }
     </ol>
 
